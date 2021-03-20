@@ -39,6 +39,17 @@ Sample Output
 
 program:
 
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+# Modify the following
+# Complete the sockMerchant function below.
 def sockMerchant(n, ar):
     x=set(ar)
     no=[]
@@ -49,4 +60,20 @@ def sockMerchant(n, ar):
     for i in no:
         pairs = pairs + (i//2)
     return pairs    
+    
+    
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = sockMerchant(n, ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
     
